@@ -20,5 +20,11 @@
     # Run the image (choose either; unnamed | named)
     # NOTE: named command will also remove the container when stopped via --rm
     docker run -d -p 3000:80 <image-id>
-    docker run -d -p 3000:80 --name data-vol-app --rm data-vol-img
+    docker run -d -p 3000:80 --rm --name data-vol-app data-vol-img
+    ```
+
+    #### Creating a named volume
+    ```bash
+    # -v <volume name>:<location in container>
+    docker run -d -p 3000:80 --rm --name data-vol-app -v feedback:/app/feedback data-vol-img
     ```
