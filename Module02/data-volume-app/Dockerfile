@@ -10,4 +10,7 @@ COPY . .
 
 EXPOSE 80
 
+# remember the WORKDIR here
+VOLUME [ "/app/feedback" ]
+
 CMD ["node", "server.js"]
